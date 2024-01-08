@@ -19,7 +19,8 @@ export default function SidebarItem({
         {Icon ? <Icon size={28} color="white" /> : <div>Invalid Icon</div>}
       </div>
       <div className="relative hidden lg:flex gap-4 p-4 rounded-full hover:bg-slate-300 hover:bg-opacity-10 cursor-pointer">
-        <Icon size={24} color="white" />
+        {Icon ? <Icon size={24} color="white" /> : <div>Invalid Icon</div>}
+
         <p className="hidden lg:block text-white text-xl">{label}</p>
       </div>
     </div>

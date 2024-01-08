@@ -8,8 +8,16 @@ export default function SidebarTweetButton() {
   const loginModal = useLoginModal();
 
   const onClick = useCallback(() => {
+    if (!loginModal) {
+      return;
+    }
+
     loginModal.onOpen();
   }, [loginModal]);
+
+  if (!loginModal) {
+    return;
+  }
 
   return (
     <div onClick={onClick}>
