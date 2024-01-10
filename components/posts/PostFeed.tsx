@@ -7,7 +7,7 @@ interface PostFeedProps {
 }
 
 export default function PostFeed({ userId }: PostFeedProps) {
-  const { data: posts, isLoading } = usePosts(userId);
+  const { data: posts = [] } = usePosts(userId);
 
   return (
     <>
